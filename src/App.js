@@ -3,6 +3,7 @@ import { Container, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import TextInput from './components/TextInput';
 import Footer from './components/Footer';
+import KeywordsModal from './components/KeywordsModal';
 
 const App = () => {
   const [keywords, setKeywords] = useState('');
@@ -48,12 +49,26 @@ const App = () => {
   }
 
   return (
-    <Box bg='teal.600' color='white' height='100vh' paddingTop={130}>
-      <Container maxW='3xl' centerContent>
+    <Box 
+    bg='teal.600' 
+    color='white' 
+    height='100vh' 
+    paddingTop={130}>
+      <Container 
+      maxW='3xl' 
+      centerContent>
         <Header />
-        <TextInput extractKeywords={extractKeywords} />
+        <TextInput 
+        extractKeywords={extractKeywords} 
+        />
         <Footer />
       </Container>
+      <KeywordsModal 
+      keywords={keywords} 
+      loading={loading} 
+      isOpen={isOpen} 
+      closeModal={closeModal} 
+      />
     </Box>
   );
 };

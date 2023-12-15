@@ -12,19 +12,30 @@ import {
   CircularProgress,
  } from "@chakra-ui/react"
 
-const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
+const KeywordsModal = ({ 
+  keywords, 
+  loading, 
+  isOpen, 
+  closeModal }) => {
   return (
     <Fragment>
-      <Modal isOpen={ isOpen } onClose={ closeModal }>
+      <Modal 
+      isOpen={ isOpen } 
+      onClose={ closeModal }>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
             Keywords
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody display='flex' alignItems='center' justifyContent='center'>
+          <ModalBody 
+          display='flex' 
+          alignItems='center' 
+          justifyContent='center'>
             { loading ? (
-              <CircularProgress isIndeterminate color='teal.300' />
+              <CircularProgress 
+              isIndeterminate 
+              color='teal.300' />
             ) : (
               <Text>
                 { keywords }
@@ -32,7 +43,10 @@ const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
             )}
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme='teal' mr={3} onClick={closeModal}>
+            <Button 
+            colorScheme='teal' 
+            mr={3} 
+            onClick={closeModal}>
               Close
             </Button>
           </ModalFooter>

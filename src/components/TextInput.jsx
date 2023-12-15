@@ -1,5 +1,12 @@
-import { Fragment, useState } from 'react';
-import { Textarea, Button, useToast } from '@chakra-ui/react';
+import { 
+  Fragment, 
+  useState 
+} from 'react';
+import { 
+  Textarea, 
+  Button, 
+  useToast 
+} from '@chakra-ui/react';
 
 const TextInput = ({ extractKeywords }) => {
   const [text, setText] = useState('');
@@ -9,7 +16,7 @@ const TextInput = ({ extractKeywords }) => {
   const submitText = () => {
     if (text === '') {
       toast({
-        title: 'Sorry 😐, text field is empty',
+        title: 'Sorry 😐, the text field is empty',
         description: 'Please enter some text for me to work with',
         status: 'error',
         duration: 5000,
@@ -39,7 +46,9 @@ const TextInput = ({ extractKeywords }) => {
         width='100%'
         _hover={{ bg: 'teal.700' }}
         onClick={submitText}
-      >Extract Keywords</Button>
+      >
+      Extract Keywords
+      </Button>
     </Fragment>
   );
 };

@@ -47,7 +47,7 @@ const TextInput = ({ extractKeywords }) => {
         _hover={{ bg: 'teal.700' }}
         onClick={submitText}
       >
-      Extract Keywords
+      Summarize
       </Button>
     </Fragment>
   );

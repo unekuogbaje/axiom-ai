@@ -22,7 +22,9 @@ const App = () => {
       },
       body: JSON.stringify({
         model: 'text-davinci-003',
-        prompt: 'Extract the keywords from this text. Make the first letter of each word uppercase and seperate the keywords using commas\n\n' + text + '',
+        prompt: 'Summarise this text for me.' + 
+        text + 
+        '',
         temperature: 0.5,
         max_tokens: 60,
         top_p: 1.0,
@@ -31,7 +33,10 @@ const App = () => {
       })
     }
 
-    const response = await fetch(process.env.REACT_APP_OPENAI_API_URL, options);
+    const response = await fetch(
+      process.env.REACT_APP_OPENAI_API_URL, 
+      options
+      );
 
     const json = await response.json();
 

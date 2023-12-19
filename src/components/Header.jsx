@@ -23,7 +23,7 @@ const Header = () => {
       <Text 
       fontSize={25} 
       textAlign='center'>
-        Write down or paste in your text below and I'll extract the keywords for you.
+        Paste in your text below and I'll summarize it for you.
       </Text>
     </Fragment>
   );

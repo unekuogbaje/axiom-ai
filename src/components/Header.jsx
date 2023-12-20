@@ -23,7 +23,7 @@ const Header = () => {
       <Text 
       fontSize={25} 
       textAlign='center'>
-        Paste in your text below and I'll summarize it for you.
+        Paste in your text or link below and I'll summarize it for you.
       </Text>
     </Fragment>
   );

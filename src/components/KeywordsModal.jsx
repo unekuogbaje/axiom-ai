@@ -25,7 +25,7 @@ const KeywordsModal = ({
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            Keywords
+            Summary
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody 
